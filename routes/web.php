@@ -20,4 +20,11 @@ Route::get('/', function () {
 // });
 
 //Route::get('forms', 'FormController@index')->name('forms');
+
 Route::post('/', 'FormController@index');
+
+Route::get('send_mail', function(){
+	return view('mail');
+});
+
+Route::post('send_email', 'MailController@send');
